@@ -4,6 +4,7 @@
     <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('bundles/ilabpro01backfotog/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/tabla.css') }}" rel="stylesheet" type="text/css" />
 
 {% endblock %}
 
@@ -41,7 +42,7 @@
                         <a href="{{ path('albumes_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                     <li>
-                        <a href="{{ path('albumes_edit', { 'id': entity.id }) }}">Mostrar Fotos</a>
+                        <a href="{{ path('albumes_edit', { 'id': entity.id }) }}">Fotos</a>
                     </li>
                 </ul>
                 </td>
@@ -56,6 +57,7 @@
                 Nuevo álbum
             </a>
         </li>
+       
     </ul>
     
             </div>

@@ -105,6 +105,17 @@ class BackController extends Controller
     }
     
     
+    /**
+     * @Route("/planfot", name="plan_fot")
+     */
+    public function seleccionarPlanAction(){
+       
+       return $this->render('ilabpro01BackFotogBundle:Back:planfot.html.twig');
+        
+   }
+   
+   
+   
    
     
 }

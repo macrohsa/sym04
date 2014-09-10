@@ -72,4 +72,9 @@ albumes_update:
 albumes_delete:
     pattern:  /albumes/{id}
     defaults: { _controller: ilabpro01BackFotogBundle:albumes:delete }
+
+    
+plan_fot:
+    pattern:  /planfot
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:seleccionarPlan }
         

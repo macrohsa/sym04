@@ -1,0 +1,63 @@
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/formularios.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="cuerpo" >
+        <div id="contenedor_cuerpo">
+     <form action="" method="post" >
+
+
+                    <div class="main_formulario">
+                        <div class="box_leyenda_completar_datos">
+                            <div class="box_titulo_secundario">
+                                <h2>Plan Fotógrafo</h2>
+                            </div>           
+            
+            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         Seleccione plan:
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        <select>
+                                            <option>Plan A30</option>
+                                            <option>Plan A60</option>
+                                        </select>
+                                    </div>
+            </div>
+            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         Seleccione forma pago:
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        <select>
+                                            <option>Forma Pago A</option>
+                                            <option>Forma Pago B</option>
+                                        </select>
+                                    </div>
+            </div>
+        
+            <div class="box_botonera">
+                                    <div class="boton_anterior">
+                                            <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('login_fotog') }}'; return false;">
+                                    </div>
+                                    <div class="boton_siguiente">
+                                            <input class="boton" type="submit" name="aceptar" value="Aceptar" >
+                                    </div>
+                                </div>
+            
+        </div>
+    
+    </div>
+    </form>
+            </div>
+    
+    </div>    
+            
+{% endblock %}

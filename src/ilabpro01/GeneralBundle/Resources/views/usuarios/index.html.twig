@@ -14,35 +14,43 @@
     <div id="contenedorCuerpo">
         
         <div id="contenidoCuerpo">
-    <h2>usuarios</h2>
+    <h2>Clientes</h2>
 
     <table class="imagetable">
         <thead>
             <tr>
+                {#
                 <th>Id</th>
                 <th>Sitio</th>
                 <th>Ciudad</th>
                 <th>Fotógrafo</th>
+                #}
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Email</th>
                 <th>Fecha alta</th>
+                {#
                 <th>Contraseña</th>
+                #}
                 <th>Acciones</th>
             </tr>
         </thead> 
         <tbody>
         {% for entity in entities %}
             <tr>
+                {#
                 <td><a href="{{ path('usuarios_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.sitio }}</td>
                 <td>{{ entity.ciudad }}</td>
                 <td>{{ entity.fotografo }}</td>
+                #}
                 <td>{{ entity.nombre }}</td>
                 <td>{{ entity.apellido }}</td>
                 <td>{{ entity.email }}</td>
                 <td>{{ entity.fechaAlta }}</td>
+                {#
                 <td>{{ entity.contrasenia }}</td>
+                #}
                 <td>
                 <ul>
                     <li>
@@ -61,7 +69,12 @@
         <ul>
         <li>
             <a href="{{ path('usuarios_new') }}">
-                Nuevo usuario
+                Nuevo cliente
+            </a>
+        </li>
+        <li>
+            <a href="">
+                Importar clientes
             </a>
         </li>
     </ul>

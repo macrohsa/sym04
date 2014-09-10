@@ -1,20 +1,87 @@
-{% extends '::base.html.twig' %}
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
 
-{% block body -%}
-    <h1>eventos creation</h1>
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/formularios.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+    
+        <div id="cuerpo" >
+        <div id="contenedor_cuerpo">
+    
+
 
     <form action="{{ path('eventos_create') }}" method="post" {{ form_enctype(form) }}>
-        {{ form_widget(form) }}
-        <p>
-            <button type="submit">Create</button>
-        </p>
-    </form>
+        
+        
+        
+        <div class="main_formulario">
+                        <div class="box_leyenda_completar_datos">
+                            <div class="box_titulo_secundario">
+                                <h2>Nuevo evento</h2>
+                            </div> 
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.nombre) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.nombre, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.nombre) }}
+                                    </div>
+                                </div>
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.descripcion) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.descripcion, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.descripcion) }}
+                                    </div>
+                                </div>
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.fechaInicio) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.fechaInicio, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.fechaInicio) }}
+                                    </div>
+                                </div>
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.fechaFin) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.fechaFin, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.fechaFin) }}
+                                    </div>
+                                </div>
+       
+    
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('eventos') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            <div class="box_botonera">
+                                    <div class="boton_anterior">
+                                            <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('eventos') }}'; return false;">
+                                    </div>
+                                    <div class="boton_siguiente">
+                                            <input class="boton" type="button" name="aceptar" value="Aceptar" >
+                                    </div>
+                                </div>
+        
+            
+                </div>
+    
+    </div>
+    </form>
+            </div>
+    
+    </div>  
 {% endblock %}
