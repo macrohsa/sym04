@@ -1,0 +1,87 @@
+{% extends "ilabpro01BackAdminBundle:Default:baseMenu.html.twig" %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/formularios.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+    
+    <div id="cuerpo" >
+        <div id="contenedor_cuerpo">
+                
+            <form action="{{ path('planfotografo_create') }}" method="post" {{ form_enctype(form) }}>
+
+                {{ form_errors(form) }}
+
+                    <div class="main_formulario">
+                        <div class="box_leyenda_completar_datos">
+                            <div class="box_titulo_secundario">
+                                <h2>Alta Plan Fotógrafo</h2> 
+                            </div>
+                            <p></p>
+                            <div class="box_input_informacion_personal">
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.codigoPlan) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.codigoPlan, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.codigoPlan) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.nombre) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.nombre, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.nombre) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.diasVigencia) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.diasVigencia, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(form.diasVigencia) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(form.disponible) }}
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(form.disponible) }}
+                                        {{ form_errors(form.disponible) }}
+                                    </div>
+                                </div>
+
+                                {{ form_rest(form) }}
+
+                                <div class="box_botonera">
+                                    <div class="boton_anterior">
+                                            <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('planfotografo') }}'; return false;">
+                                    </div>
+                                    <div class="boton_siguiente">
+                                            <input class="boton" type="submit" name="aceptar" value="Aceptar" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

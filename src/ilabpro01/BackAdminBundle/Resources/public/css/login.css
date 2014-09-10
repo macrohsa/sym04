@@ -1,0 +1,53 @@
+
+#contenedor{
+    width: 400px;
+    margin: auto;
+    clear: both;
+    background-color: #ffffff;
+}
+
+.fila{
+    clear: both;
+}
+
+.fila1{
+    clear: both;
+    padding-top: 20px;
+}
+
+label{
+    width: 160px;
+    float: left;
+    display: block;
+    text-align: right;
+    padding-top: 4px;
+    padding-right: 10px;
+    margin-top: 2px;
+}
+
+.boton{
+    margin-left: 120px;
+    margin-top: 20px;
+    padding: 6px;
+}
+
+p {
+    height: 20px;
+    margin-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.etiqueta1 label {
+    /*float: right;*/
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+input[type="checkbox"] {
+    float: left;
+    margin-left: 200px;
+}

@@ -1,0 +1,38 @@
+ilabpro01_front:
+    resource: "@ilabpro01FrontBundle/Resources/config/routing.yml"
+    prefix:   /front
+
+ilabpro01_back_fotog:
+    resource: "@ilabpro01BackFotogBundle/Resources/config/routing.yml"
+    prefix:   /back
+
+ilabpro01_back_admin:
+    resource: "@ilabpro01BackAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+ilabpro01_general:
+    resource: "@ilabpro01GeneralBundle/Resources/config/routing.yml"
+    prefix:   /general
+
+
+#back:
+#    resource: "@ilabpro01BackFotogBundle/Controller/"
+#    prefix:   /back
+#    type: annotation   
+#    
+#admin:
+#    resource: "@ilabpro01BackAdminBundle/Controller/"
+#    prefix:   /admin
+#    type: annotation
+#    
+#  
+#    
+#general:
+#    resource: "@ilabpro01GeneralBundle/Controller/"
+#    prefix:   /general
+#    type: annotation
+
+
+
+    
+    

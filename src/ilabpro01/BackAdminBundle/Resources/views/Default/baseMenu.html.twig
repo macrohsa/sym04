@@ -1,0 +1,65 @@
+{% extends "ilabpro01BackAdminBundle:Default:baseBackAdmin.html.twig" %}
+
+
+{% block title %}Sitio Admin
+{% endblock %}
+        
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+
+
+{% endblock %}
+        
+{% block cabecera %}
+        
+    <header>
+        <div id="contenedorHeader">
+            <div class="izquierda">
+                
+            </div>
+            <div class="derecha">
+                <div class="logo">
+                    
+                </div>
+                
+            </div>
+        
+    {% block menu %}
+            <div class="menuHeader">
+                <nav>
+                    
+ <ul class="nav">
+    <li><a href="{{ path('lista_planes') }}">Planes</a>
+        <ul>
+            <li><a href="{{ path('lista_planes') }}">Listado</a></li>
+        </ul>
+    </li>
+    <li><a href="{{ path('lista_fpago') }}">Formas Pago</a>
+        <ul>
+            <li><a href="{{ path('lista_fpago') }}">Listado</a></li>
+        </ul>
+    </li>
+    <li><a href="http://localhost/Project02/web/app_dev.php/general/listafotog">Fotógrafos</a>
+        <ul>
+            <li><a href="http://localhost/Project02/web/app_dev.php/general/listafotog">Listado</a></li>
+        </ul>
+    </li>
+    <li><a href="">Pedidos</a></li>
+</ul>
+         </nav>          
+            </div>
+    {% endblock %}
+            
+        </div>
+    </header>
+        
+{% endblock %}
+
+{% block cuerpo %}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+

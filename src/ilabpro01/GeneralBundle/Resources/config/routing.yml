@@ -1,0 +1,221 @@
+ilabpro01_general_homepage:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01GeneralBundle:Default:index }
+
+
+lista_fotog:
+    pattern:  /listafotog
+    defaults: { _controller: ilabpro01GeneralBundle:general:listadoFotog }
+    
+    
+index:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01GeneralBundle:general:volverLogin }
+    
+
+eventos:
+    pattern:  /eventos
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:index }
+    
+    
+eventos_create:
+    pattern:  /eventos
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:create }
+    
+    
+eventos_new:
+    pattern:  /eventos/new
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:new }
+    
+    
+eventos_show:
+    pattern:  /eventos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:show }
+    
+    
+eventos_edit:
+    pattern:  /eventos/{id}/edit
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:edit }
+    
+    
+eventos_update:
+    pattern:  /eventos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:update }
+    
+    
+eventos_delete:
+    pattern:  /eventos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:eventos:delete }
+    
+    
+fotografo:
+    pattern:  /fotografo
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:index }
+    
+    
+fotografo_create:
+    pattern:  /fotografo
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:create }
+    
+    
+fotografo_new:
+    pattern:  /fotografo/new
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:new }
+    
+    
+fotografo_show:
+    pattern:  /fotografo/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:show }
+    
+    
+fotografo_edit:
+    pattern:  /fotografo/{id}/edit
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:edit }
+    
+    
+fotografo_update:
+    pattern:  /fotografo/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:update }
+    
+    
+fotografo_delete:
+    pattern:  /fotografo/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:fotografo:delete }
+    
+pedidos:
+    pattern:  /pedidos
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:index }
+    
+    
+pedidos_create:
+    pattern:  /pedidos
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:create }
+    
+    
+pedidos_new:
+    pattern:  /pedidos/new
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:new }
+    
+    
+pedidos_show:
+    pattern:  /pedidos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:show }
+    
+    
+pedidos_edit:
+    pattern:  /pedidos/{id}/edit
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:edit }
+    
+    
+pedidos_update:
+    pattern:  /pedidos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:update }
+    
+    
+pedidos_delete:
+    pattern:  /pedidos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:pedidos:delete }
+    
+    
+precioxproducto:
+    pattern:  /precioXproducto
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:index }
+    
+    
+precioxproducto_create:
+    pattern:  /precioXproducto
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:create }
+    
+    
+precioxproducto_new:
+    pattern:  /precioXproducto/new
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:new }
+    
+    
+precioxproducto_show:
+    pattern:  /precioXproducto/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:show }
+    
+    
+precioxproducto_edit:
+    pattern:  /precioXproducto/{id}/edit
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:edit }
+    
+    
+precioxproducto_update:
+    pattern:  /precioXproducto/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:update }
+    
+    
+precioxproducto_delete:
+    pattern:  /precioXproducto/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:precioXproducto:delete }
+    
+productos:
+    pattern:  /productos
+    defaults: { _controller: ilabpro01GeneralBundle:productos:index }
+    
+    
+productos_create:
+    pattern:  /productos
+    defaults: { _controller: ilabpro01GeneralBundle:productos:create }
+    
+    
+productos_new:
+    pattern:  /productos/new
+    defaults: { _controller: ilabpro01GeneralBundle:productos:new }
+    
+    
+productos_show:
+    pattern:  /productos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:productos:show }
+    
+    
+productos_edit:
+    pattern:  /productos/{id}/edit
+    defaults: { _controller: ilabpro01GeneralBundle:productos:edit }
+    
+    
+productos_update:
+    pattern:  /productos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:productos:update }
+    
+    
+productos_delete:
+    pattern:  /productos/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:productos:delete }
+    
+
+usuarios:
+    pattern:  /usuarios
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:index }
+    
+    
+usuarios_create:
+    pattern:  /usuarios
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:create }
+    
+    
+usuarios_new:
+    pattern:  /usuarios/new
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:new }
+    
+    
+usuarios_show:
+    pattern:  /usuarios/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:show }
+    
+    
+usuarios_edit:
+    pattern:  /usuarios/{id}/edit
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:edit }
+    
+    
+usuarios_update:
+    pattern:  /usuarios/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:update }
+    
+    
+usuarios_delete:
+    pattern:  /usuarios/{id}
+    defaults: { _controller: ilabpro01GeneralBundle:usuarios:delete }

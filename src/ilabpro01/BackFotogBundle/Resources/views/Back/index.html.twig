@@ -1,0 +1,26 @@
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="contenedorCuerpo">
+        
+        <div id="contenidoCuerpo">
+            
+            <h2>Bienvenido Fotógrafo</h2>
+
+            <a href="{{ path('index_back') }}">Volver</a>
+            
+        </div>
+    
+    </div>
+    
+            
+            
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends "ilabpro01BackAdminBundle:Default:baseMenu.html.twig" %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/tabla.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="contenedorCuerpo">
+        
+        <div id="contenidoCuerpo">
+    <h2>Fot&oacute;grafos</h2>
+
+    <table class="imagetable">
+        <thead>
+            <tr>
+{#                
+                <th>Id</th>
+
+                <th>Id sitio</th>
+#}
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                {#
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                #}
+                <th>Telefono</th>
+                <th>Estudio</th>
+                <th>Fecha alta</th>
+                {#
+                <th>Id ciudad</th>
+                <th>Id plan fotografo</th>
+                <th>Id forma pago</th>
+                <th>Fecha inicio plan</th>
+                #}
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+{#                
+                <td><a href="{{ path('fotografo_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+
+                <td>{{ entity.idSitio }}</td>
+#}
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.apellido }}</td>
+                <td>{{ entity.email }}</td>
+                {#
+                <td>{{ entity.usuario }}</td>
+                <td>{{ entity.contrasenia }}</td>
+                #}
+                <td>{{ entity.telefono }}</td>
+                <td>{{ entity.estudio }}</td>
+                <td>{{ entity.fechaAlta }}</td>
+                {#
+                <td>{{ entity.idCiudad }}</td>
+                <td>{{ entity.idPlanFotografo }}</td>
+                <td>{{ entity.idFormaPago }}</td>
+                <td>{{ entity.fechaInicioPlan }}</td>
+                #}
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('fotografo_show', { 'id': entity.id }) }}">Mostrar</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('fotografo_edit', { 'id': entity.id }) }}">Editar</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('fotografo_new') }}">
+                Nuevo fotografo
+            </a>
+        </li>
+    </ul>
+    
+        
+           </div>
+    
+    </div> 
+    {% endblock %}

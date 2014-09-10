@@ -1,0 +1,75 @@
+ilabpro01_back_fotog_homepage:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
+    
+index_back:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
+    
+    
+login_fotog:
+    pattern:  /login
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:login }
+    
+    
+perfil_fotog:
+    pattern:  /perfil
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:perfil }
+    
+lista_productos:
+    pattern:  /listaprod
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoProductos }
+    
+pedidos:
+    pattern:  /pedidos
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:pedidos }
+    
+    
+precios_productos:
+    pattern:  /preciosprod
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:preciosProductos }
+    
+    
+lista_eventos:
+    pattern:  /listaeventos
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoEventos }
+    
+    
+lista_usuarios:
+    pattern:  /listausuarios
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoUsuarios }
+    
+albumes:
+    pattern:  /albumes
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:index }
+    
+    
+albumes_create:
+    pattern:  /albumes
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:create }
+    
+    
+albumes_new:
+    pattern:  /albumes/new
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:new }
+    
+    
+albumes_show:
+    pattern:  /albumes/{id}
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:show }
+    
+    
+albumes_edit:
+    pattern:  /albumes/{id}/edit
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:edit }
+    
+    
+albumes_update:
+    pattern:  /albumes/{id}
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:update }
+    
+    
+albumes_delete:
+    pattern:  /albumes/{id}
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:delete }
+        

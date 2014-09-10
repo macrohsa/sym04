@@ -1,0 +1,55 @@
+
+{% extends "ilabpro01BackAdminBundle:Default:baseBackAdmin.html.twig" %}
+
+{% block stylesheets %}
+        
+        <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('bundles/ilabpro01backadmin/css/login.css') }}" rel="stylesheet" type="text/css" />
+        
+
+{% endblock %}
+
+{% block cuerpo %}
+        
+        <div id="contenedor">
+            <form id="form1" name="form1" action="{{ path('login_back') }}" method="get">
+                <p>
+                    Inicio de sesión
+                </p>
+                <div class="fila">
+                    <span class="etiqueta">
+                         <label for="usuario">Usuario:</label>
+                    </span>
+                    <span class="form-el">
+                        <input id="usuario" name="usuario" type="text" required="true" value="aa" autocomplete="off" maxlength="20"/>
+                    </span>
+                </div>
+                <div class="fila">
+                    <span class="etiqueta">
+                         <label for="contrasenia">Contraseña:</label>
+                    </span>
+                    <span class="form-el">
+                        <input id="contrasenia" name="contrasenia" type="password" required="true" value="aa" maxlength="20" />
+                    </span>
+                </div>
+                <div class="fila1">
+                    <span class="form-el">
+                         <input type="checkbox" id="recordar" name="recordar"/>
+                    </span>
+                    <span class="etiqueta1">
+                        <label>Recordarme</label>
+                    </span>
+                </div>
+                <div class="fila">
+                    <span class="form-el">
+                        <button class="boton" type="submit" >Ingresar</button>
+                    </span>
+                </div>
+
+                </form>
+      </div>
+
+
+{% endblock %}
+
+

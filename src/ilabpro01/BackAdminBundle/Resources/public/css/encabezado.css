@@ -1,0 +1,60 @@
+
+header{
+    color: #FFF;
+
+}
+
+header #contenedorHeader{
+	width:970px;
+	margin:auto;
+        background-color: #FFF;
+}
+
+header  div.izquierda{
+	float:left;
+        height: 68px;
+        width: 670px;
+        background-color: #E6E6E6;
+        /*Bordes redondeados*/
+    -webkit-border-radius:5px;/*Chrome y Safari*/
+    -moz-border-radius:5px;/*Firefox*/
+    -o-border-radius:5px;/*Opera*/
+    border-radius:5px;/*Estandar por defecto*/
+}
+
+header  div.derecha{
+	float:left;
+        background-color: #FFF;
+        /*Bordes redondeados*/
+    -webkit-border-radius:5px;/*Chrome y Safari*/
+    -moz-border-radius:5px;/*Firefox*/
+    -o-border-radius:5px;/*Opera*/
+    border-radius:5px;/*Estandar por defecto*/
+}
+
+header div.logo{
+
+    height: 68px;
+    /*margin-top: 45px;*/
+    position: absolute;
+	width:300px;
+        background-color: #FFF;
+        background-image: url("../images/logo1.jpg");
+        /*Bordes redondeados*/
+    -webkit-border-radius:5px;/*Chrome y Safari*/
+    -moz-border-radius:5px;/*Firefox*/
+    -o-border-radius:5px;/*Opera*/
+    border-radius:5px;/*Estandar por defecto*/
+}
+
+header div.logo  h1{
+    font-size: 11px;
+    margin-left: 45px;
+    margin-top: 30px;
+    width: 600px;
+	color: #FFF;	
+}
+
+
+
+

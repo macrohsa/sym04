@@ -1,0 +1,13 @@
+
+#contenedorCuerpo {
+    width: 970px;
+    margin: auto;
+    clear: both;
+    background-color: #ffffff;
+}
+
+#contenidoCuerpo {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+

@@ -1,0 +1,188 @@
+{% extends "ilabpro01BackAdminBundle:Default:baseMenu.html.twig" %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/formularios.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="cuerpo" >
+        <div id="contenedor_cuerpo">
+
+
+    <form action="{{ path('fotografo_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+        <input type="hidden" name="_method" value="PUT" />
+        
+        {{ form_errors(edit_form) }}
+
+                    <div class="main_formulario">
+                        <div class="box_leyenda_completar_datos">
+                            <div class="box_titulo_secundario">
+                                <h2 id="titulo" >Edici&oacute;n fot&oacute;grafo</h2> 
+                            </div>
+                            <p></p>
+                            <div class="box_input_informacion_personal">
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.idSitio) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.idSitio, { 'attr': {'readonly': 'true', 'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.idSitio) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.nombre) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.nombre, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.nombre) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.apellido) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.apellido, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.apellido) }}
+                                    </div>
+                                </div>
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.email) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.email, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.email) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.usuario) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.usuario, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.usuario) }}
+                                    </div>
+                                </div>     
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.contrasenia) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.contrasenia, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.contrasenia) }}
+                                    </div>
+                                </div> 
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.telefono) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.telefono, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.telefono) }}
+                                    </div>
+                                </div> 
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.estudio) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.estudio, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.estudio) }}
+                                    </div>
+                                </div>                                 
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.fechaAlta) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.fechaAlta, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.fechaAlta) }}
+                                    </div>
+                                </div>
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.idCiudad) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.idCiudad, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.idCiudad) }}
+                                    </div>
+                                </div>
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.idPlanFotografo) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.idPlanFotografo, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.idPlanFotografo) }}
+                                    </div>
+                                </div>
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.idFormaPago) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.idFormaPago, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.idFormaPago) }}
+                                    </div>
+                                </div>
+
+                                <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.fechaInicioPlan) }}
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.fechaInicioPlan) }}
+                                        {{ form_errors(edit_form.fechaInicioPlan) }}
+                                    </div>
+                                </div>
+
+                                {{ form_rest(edit_form) }}
+                                
+                                <div class="box_botonera">
+                                    <div class="boton_anterior">
+                                            <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('fotografo') }}'; return false;">
+                                    </div>
+                                    <div class="boton_siguiente">
+                                            <input class="boton" type="submit" name="aceptar" value="Aceptar" >
+                                    </div>
+                                </div>                           
+
+
+    <li>
+        <form action="{{ path('fotografo_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Eliminar</button>
+        </form>
+    </li>
+
+
+               </div>
+    
+    </div> 
+{% endblock %}

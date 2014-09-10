@@ -1,0 +1,96 @@
+ilabpro01_back_admin_homepage:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01BackAdminBundle:Admin:index }
+
+   
+index_admin:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01BackAdminBundle:Admin:index }
+    
+    
+login_back:
+    pattern:  /login
+    defaults: { _controller: ilabpro01BackAdminBundle:Admin:login }
+    
+
+lista_planes:
+    pattern:  /listaplan
+    defaults: { _controller: ilabpro01BackAdminBundle:Admin:listadoPlanes }
+    
+    
+lista_fpago:
+    pattern:  /listafpago
+    defaults: { _controller: ilabpro01BackAdminBundle:Admin:listadoFormasPago }
+    
+    
+formapagofotografo:
+    pattern:  /formapagofotografo
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:index }
+    
+    
+formapagofotografo_create:
+    pattern:  /formapagofotografo
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:create }
+    
+    
+formapagofotografo_new:
+    pattern:  /formapagofotografo/new
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:new }
+    
+    
+formapagofotografo_show:
+    pattern:  /formapagofotografo/{id}
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:show }
+    
+    
+formapagofotografo_edit:
+    pattern:  /formapagofotografo/{id}/edit
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:edit }
+    
+    
+formapagofotografo_update:
+    pattern:  /formapagofotografo/{id}
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:update }
+    
+    
+formapagofotografo_delete:
+    pattern:  /formapagofotografo/{id}
+    defaults: { _controller: ilabpro01BackAdminBundle:formaPagoFotografo:delete }
+
+
+planfotografo:
+    pattern:  /planfotografo
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:index }
+    
+    
+planfotografo_create:
+    pattern:  /planfotografo
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:create }
+    
+    
+planfotografo_new:
+    pattern:  /planfotografo/new
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:new }
+    
+    
+planfotografo_show:
+    pattern:  /planfotografo/{id}
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:show }
+    
+    
+planfotografo_edit:
+    pattern:  /planfotografo/{id}/edit
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:edit }
+    
+    
+planfotografo_update:
+    pattern:  /planfotografo/{id}
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:update }
+    
+    
+planfotografo_delete:
+    pattern:  /planfotografo/{id}
+    defaults: { _controller: ilabpro01BackAdminBundle:planFotografo:delete }
+
+    
+    

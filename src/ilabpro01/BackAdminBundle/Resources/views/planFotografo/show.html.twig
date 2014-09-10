@@ -1,0 +1,75 @@
+{% extends "ilabpro01BackAdminBundle:Default:baseMenu.html.twig" %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/tabla.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+    
+    <div id="contenedorCuerpo">
+        
+        <div id="contenidoCuerpo">
+            
+            <h2>Plan Fotógrafo</h2>
+
+                <table class="imagetable">
+                    <tbody>
+            {#            <tr>
+                            <th>Id</th>
+                            <td>{{ entity.id }}</td>
+                        </tr>
+            #}
+                        <tr>
+                            <th>Código</th>
+                            <td>{{ entity.codigoPlan }}</td>
+                        </tr>
+                        <tr>
+                            <th>Nombre</th>
+                            <td>{{ entity.nombre }}</td>
+                        </tr>
+                        <tr>
+                            <th>Días Vigencia</th>
+                            <td>{{ entity.diasVigencia }}</td>
+                        </tr>
+                        <tr>
+                            <th>Disponible</th>
+                            <td>
+                                {% if entity.disponible == 1 %}
+                                    Sí
+                                {% else %}
+                                    No
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                    <ul class="record_actions">
+                <li>
+                    <a href="{{ path('planfotografo') }}">
+                        Volver
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('planfotografo_edit', { 'id': entity.id }) }}">
+                        Editar
+                    </a>
+                </li>
+                <li>
+                    <form action="{{ path('planfotografo_delete', { 'id': entity.id }) }}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        {{ form_widget(delete_form) }}
+                        <button type="submit">Eliminar</button>
+                    </form>
+                </li>
+            </ul>
+    
+           </div>
+    
+    </div> 
+{% endblock %}
