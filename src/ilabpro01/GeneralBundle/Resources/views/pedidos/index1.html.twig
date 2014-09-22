@@ -65,10 +65,12 @@
                 #}
                 <th>Cliente</th>
                 <th>Fecha</th>
-                <th>Importe</th>
+                <th>Importe ($)</th>
                 <th>Estado</th>
                 <th>Evento</th>
+                {#
                 <th>Acciones</th>
+#}
             </tr>
         </thead>
         <tbody>
@@ -84,6 +86,7 @@
                 <td>{{ entity.importe }}</td>
                 <td>{{ entity.estado }}</td>
                 <td>{{ entity.evento }}</td>
+                {#
                 <td>
                 <ul>
                     <li>
@@ -94,21 +97,29 @@
                     </li>
                 </ul>
                 </td>
+#}
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
     
-    {#
+    
         <ul>
+            {#
         <li>
             <a href="{{ path('pedidos_new') }}">
                 Nuevo pedido
             </a>
         </li>
+#}  
+<li>
+                <a href="{{ path('login_back') }}">
+                    Volver
+                </a>
+            </li>
     </ul>
-   #}             
+              
            </div>
     
     </div> 

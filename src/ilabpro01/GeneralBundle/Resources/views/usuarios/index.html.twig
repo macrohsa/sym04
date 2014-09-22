@@ -15,7 +15,20 @@
         
         <div id="contenidoCuerpo">
     <h2>Clientes</h2>
-
+<div class="item_input_dato_personal">
+                <div class="input_nombre">
+                                    <label class="label_informacion_personal">
+                                         Evento:
+                                    </label>
+                                    
+                                        <select>
+                                            <option>[Todos]</option>
+                                            <option>Evento A</option>
+                                            <option>Evento B</option>
+                                        </select>
+                                    </div>
+            </div>
+    <br>
     <table class="imagetable">
         <thead>
             <tr>
@@ -53,9 +66,11 @@
                 #}
                 <td>
                 <ul>
+                    {#
                     <li>
                         <a href="{{ path('usuarios_show', { 'id': entity.id }) }}">Mostrar</a>
                     </li>
+#}
                     <li>
                         <a href="{{ path('usuarios_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
@@ -76,6 +91,9 @@
             <a href="">
                 Importar clientes
             </a>
+        </li>
+        <li>
+            <a href="{{ path('login_fotog') }}">Volver</a>
         </li>
     </ul>
                </div>
