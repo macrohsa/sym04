@@ -9,33 +9,32 @@
 
 {% block cuerpo %}
 
-    <div id="contenedor_cuerpo">
-    
     <div id="container">
 <div id="wrapper">
 <div id="content">
-    <h2>Perfil Fotógrafo</h2>
-<p>
-                
-                <a href="{{ path('fotog_edit', { 'id': 2 }) }}">Modificar datos</a>
-            </p>
+    
+<div id="content01">
             <p>
                 
-                <a href="{{ path('fotog_imagen') }}">Modificar imagen</a>
+                <h2>Modificar imagen</h2>
             </p>
             <p>
-                Modificar tema
+                Tamaño recomendado 150x150 px
+            </p>
+            <p>
+                <img src="{{ asset('bundles/ilabpro01backfotog/images/paisaje1.jpg') }}" />
+            </p>
+            <p>
+                Subir nueva imagen
             </p>
 
-            <a href="{{ path('login_fotog') }}">Volver</a>
+            <a href="{{ path('perfil_fotog') }}">Volver</a>
 </div>
+    </div>
 </div>
-<div id="extra">
-    <p><h3>Nombre Fotógrafo</h3></p>
 
-<img src="{{ asset('bundles/ilabpro01backfotog/images/paisaje1.jpg') }}" />
 </div>
-</div>
-        </div>
+    
+            
             
 {% endblock %}

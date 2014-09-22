@@ -34,6 +34,25 @@ class pedidosController extends Controller
             'entities' => $entities,
         );
     }
+    
+    
+    /**
+     * Lists all pedidos entities.
+     *
+     * @Route("/", name="pedidos")
+     * @Method("GET")
+     * @Template()
+     */
+    public function index1Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('ilabpro01GeneralBundle:pedidos')->findAll();
+
+        return array(
+            'entities' => $entities,
+        );
+    }
 
     /**
      * Creates a new pedidos entity.

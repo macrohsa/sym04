@@ -4,7 +4,11 @@ namespace ilabpro01\BackFotogBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use ilabpro01\GeneralBundle\Entity\fotografo;
+use ilabpro01\GeneralBundle\Form\fotografoType;
 
 
 class BackController extends Controller
@@ -39,10 +43,7 @@ class BackController extends Controller
     }
     
     
-     /**
-     * ABM Productos
-     * 
-     */
+
     
     /**
      * @Route("/listaprod", name="lista_productos")
@@ -56,16 +57,64 @@ class BackController extends Controller
     }
     
     
+    /**
+     * Displays a form to edit an existing fotografo entity.
+     *
+     * @Route("/{id}/edit", name="fotografo_edit")
+     * @Method("GET")
+     * @Template()
+     */
+    public function fotogEditAction(){
+        
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('ilabpro01GeneralBundle:fotografo')->find(2);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find fotografo entity.');
+        }
+
+        $editForm = $this->createForm(new fotografoType(), $entity);
+        
+         return $this->render(('ilabpro01BackFotogBundle:Back:edit.html.twig'),
+         array(
+            'entity'      => $entity,
+            'edit_form'   => $editForm->createView(),
+            
+        ));
+    }
+    
+    public function fotogImagenAction(){
+        
+        
+               
+         return $this->render('ilabpro01BackFotogBundle:Back:imagenPerfil.html.twig');
+    }
     
     /**
-     * @Route("/pedidos", name="pedidos")
+     * @Route("/pedidos", name="lista_pedidos")
      */
-    public function pedidosAction(){
+    public function listadoPedidosAction(){
         
         // Redirige al controlador pedidos para gestionar pedidos
         $response = $this->forward('ilabpro01GeneralBundle:pedidos:index');
         
         return $response;
+    }
+    
+    
+    public function listadoPendientesAction(){
+        
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('ilabpro01GeneralBundle:pedidos')->findAll();
+
+        
+        return $this->render('ilabpro01BackFotogBundle:Back:pendientes.html.twig',
+                array(
+            'entities' => $entities,
+        ));
     }
     
     
@@ -114,8 +163,6 @@ class BackController extends Controller
         
    }
    
-   
-   
-   
+
     
 }

@@ -1,1 +1,40 @@
-Hello!
+{% extends "ilabpro01BackAdminBundle:Default:baseBackAdmin.html.twig" %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/cuerpo_1.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="contenedorCuerpo">
+        
+        <div id="contenidoCuerpo">
+            
+            <div id="container">
+<div id="header"></div>
+<div id="wrapper">
+<div id="content">
+    <p><strong><a href="http://localhost/Project02/web/app_dev.php/admin/hello">Administrador</a></strong> </p>
+</div>
+</div>
+<div id="navigation">
+    <p><strong><a href="http://localhost/Project02/web/app_dev.php/back/hello">Fotógrafo</a></strong></p>
+</div>
+<div id="extra">
+    <p><strong><a href="http://localhost/Project02/web/app_dev.php/front/hello">Cliente</a></strong> </p>
+</div>
+
+</div>
+
+
+            
+            
+        </div>
+    
+    </div>
+    
+            
+            
+{% endblock %}

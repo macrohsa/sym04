@@ -1,0 +1,77 @@
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/tabla.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="contenedor_cuerpo">
+    
+    <div id="container">
+<div id="wrapper">
+<div id="content">
+    <h2>Evento 1</h2>
+<div class="item_input_dato_personal">
+        <div class="input_nombre">
+
+            <label class="label_informacion_personal">
+                                         Producto:
+                                    </label>
+                                    
+                                        
+    <select>
+        <option>Producto 1</option>
+      <option>Producto 2</option>
+      <option>Producto 3</option>
+    </select>
+            <input type="button" value="Agregar"> 
+        <br>
+                                    </div>
+            </div>
+    <br>
+            
+                <br>
+    <table class="imagetable">
+        <thead>
+            <tr>
+
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>Producto 1</td>
+                <td>Descripción 1</td>
+                <td>
+                <ul>
+
+                    <li>
+                        <a href="">Eliminar</a>
+                    </li>
+                    </li>
+                </ul>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+            
+            <p><a href="{{ path('lista_eventos') }}">Volver</a></p>
+            
+</div>
+
+</div>
+        </div>
+            
+{% endblock %}
+

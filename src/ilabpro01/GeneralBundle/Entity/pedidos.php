@@ -56,11 +56,36 @@ class pedidos {
     protected $importe;
     
     
+    /**
+     * @ORM\Column(type="string", length=50)
+     * 
+     */
+    protected $estado;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * 
+     */
+    protected $evento;
+    
     
     public function __toString() {
         return $nom = $this->getNombre();
     }
     
+
+   
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set sitio
@@ -178,12 +203,48 @@ class pedidos {
     }
 
     /**
-     * Get id
+     * Set estado
      *
-     * @return integer 
+     * @param string $estado
+     * @return pedidos
      */
-    public function getId()
+    public function setEstado($estado)
     {
-        return $this->id;
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return string 
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * Set evento
+     *
+     * @param string $evento
+     * @return pedidos
+     */
+    public function setEvento($evento)
+    {
+        $this->evento = $evento;
+
+        return $this;
+    }
+
+    /**
+     * Get evento
+     *
+     * @return string 
+     */
+    public function getEvento()
+    {
+        return $this->evento;
     }
 }

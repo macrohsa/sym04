@@ -42,7 +42,6 @@
                 <th>Descripción</th>
                 <th>Fecha Inicio</th>
                 <th>Fecha Fin</th>
-                <th>Tipo acceso</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -58,25 +57,15 @@
                 <td>{{ entity.descripcion }}</td>
                 <td>{{ entity.fechaInicio }}</td>
                 <td>{{ entity.fechaFin }}</td>
-                <td>{{ entity.sitio }}</td>
                 <td>
                 <ul>
-                    {#
                     <li>
                         <a href="{{ path('eventos_show', { 'id': entity.id }) }}">Mostrar</a>
                     </li>
-#}
                     <li>
                         <a href="{{ path('eventos_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
-                    <li>
-                        <a href="{{ path('productos_evento') }}">Productos</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('galeria_fotos') }}">Fotos</a>
-                    </li>
                 </ul>
-
                 </td>
             </tr>
         {% endfor %}

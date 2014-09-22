@@ -1,3 +1,23 @@
 ilabpro01_front_homepage:
-    pattern:  /hello/{name}
+    pattern:  /hello
     defaults: { _controller: ilabpro01FrontBundle:Default:index }
+
+front_homepage:
+    pattern:  /front
+    defaults: { _controller: ilabpro01FrontBundle:Front:index }
+    
+    
+show_fotog:
+    pattern:  /showf
+    defaults: { _controller: ilabpro01FrontBundle:Front:showFotog }    
+    
+    
+show_eventos:
+    pattern:  /showevent
+    defaults: { _controller: ilabpro01FrontBundle:Front:showEventos }     
+
+acceso_eventos:
+    pattern:  /accesoevent
+    defaults: { _controller: ilabpro01FrontBundle:Front:accesoEventos }  
+    
+    

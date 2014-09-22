@@ -1,0 +1,57 @@
+{% extends "ilabpro01FrontBundle:Default:baseFront.html.twig" %}
+
+
+{% block title %}Sitio
+{% endblock %}
+        
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+
+
+{% endblock %}
+        
+{% block cabecera %}
+        
+    <header>
+        <div id="contenedorHeader">
+            <div class="izquierda">
+                
+            </div>
+            <div class="derecha">
+                <div class="logo">
+                    
+                </div>
+                
+            </div>
+        
+    {% block menu %}
+            <div class="menuHeader">
+                <nav>
+                    
+ <ul class="nav">
+    <li><a href="{{ path('show_fotog') }}">Fotógrafo</a>
+
+    </li>
+    <li><a href="{{ path('show_fotog') }}">Productos</a>
+    </li>
+    <li><a href="{{ path('show_eventos') }}">Eventos</a>
+    </li>
+
+</ul>
+         </nav>          
+            </div>
+    {% endblock %}
+            
+        </div>
+    </header>
+        
+{% endblock %}
+
+{% block cuerpo %}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+

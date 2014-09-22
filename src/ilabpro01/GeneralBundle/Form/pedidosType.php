@@ -16,6 +16,8 @@ class pedidosType extends AbstractType
             ->add('usuario')
             ->add('fechaAlta')
             ->add('importe')
+            ->add('estado')
+            ->add('evento')
         ;
     }
 

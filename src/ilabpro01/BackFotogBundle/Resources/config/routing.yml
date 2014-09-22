@@ -2,6 +2,7 @@ ilabpro01_back_fotog_homepage:
     pattern:  /hello
     defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
     
+    
 index_back:
     pattern:  /hello
     defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
@@ -16,9 +17,11 @@ perfil_fotog:
     pattern:  /perfil
     defaults: { _controller: ilabpro01BackFotogBundle:Back:perfil }
     
+    
 lista_productos:
     pattern:  /listaprod
     defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoProductos }
+    
     
 pedidos:
     pattern:  /pedidos
@@ -35,9 +38,20 @@ lista_eventos:
     defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoEventos }
     
     
+lista_pedidos:
+    pattern:  /listapedidos
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoPedidos }
+  
+  
+pendientes:
+    pattern:  /pendientes
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoPendientes }
+    
+    
 lista_usuarios:
     pattern:  /listausuarios
     defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoUsuarios }
+    
     
 albumes:
     pattern:  /albumes
@@ -77,4 +91,16 @@ albumes_delete:
 plan_fot:
     pattern:  /planfot
     defaults: { _controller: ilabpro01BackFotogBundle:Back:seleccionarPlan }
-        
+    
+    
+fotog_edit:
+    pattern:  /fotografo/{id}/edit
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:fotogEdit }
+
+  
+fotog_imagen:
+    pattern:  /fotografo/imagen
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:fotogImagen }
+    
+
+

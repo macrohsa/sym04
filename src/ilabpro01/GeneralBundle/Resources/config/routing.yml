@@ -7,6 +7,10 @@ lista_fotog:
     pattern:  /listafotog
     defaults: { _controller: ilabpro01GeneralBundle:general:listadoFotog }
     
+lista_pedidos:
+    pattern:  /listapedidos
+    defaults: { _controller: ilabpro01GeneralBundle:general:listadoPedidos }
+    
     
 index:
     pattern:  /hello
@@ -219,3 +223,13 @@ usuarios_update:
 usuarios_delete:
     pattern:  /usuarios/{id}
     defaults: { _controller: ilabpro01GeneralBundle:usuarios:delete }
+    
+    
+galeria_fotos:
+    pattern:  /eventosfotos
+    defaults: { _controller: ilabpro01GeneralBundle:general:galeria }
+    
+productos_evento:
+    pattern:  /eventosproductos
+    defaults: { _controller: ilabpro01GeneralBundle:general:productosEvento }
+    

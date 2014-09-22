@@ -1,0 +1,86 @@
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/tabla.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block cuerpo %}
+
+<div id="contenedorCuerpo">
+    <div id="contenidoCuerpo">
+        <h2>Pedidos pendientes</h2>
+
+        <div class="item_input_dato_personal">
+            <div class="input_nombre">
+                <label class="label_informacion_personal">
+                     Evento:
+                </label>
+                <select>
+                    <option>[Todos]</option>
+                    <option>Evento A</option>
+                    <option>Evento B</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <table class="imagetable">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="pedido" value="pedido"></th>
+
+                    {#
+                    <th>Id</th>
+                    <th>Sitio</th>
+                    <th>Fotografo</th>
+                    #}
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Importe</th>
+                    {#
+                    <th>Estado</th>
+                    #}
+                    <th>Evento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <th><input type="checkbox" name="pedido" value="pedido"></th>
+                    {#
+                    <td><a href="{{ path('pedidos_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.sitio }}</td>
+                    <td>{{ entity.fotografo }}</td>
+                    #}
+                    <td>{{ entity.usuario }}</td>
+                    <td>{{ entity.fechaAlta }}</td>
+                    <td>{{ entity.importe }}</td>
+                    {#
+                    <td>{{ entity.estado }}</td>
+                    #}
+                    <td>{{ entity.evento }}</td>
+                    <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('pedidos_edit', { 'id': entity.id }) }}">Confirmar</a>
+                        </li>
+                    </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+        <div class="input_nombre">
+   
+                     Confirmar pedidos seleccionados
+              
+        </div>
+
+   </div>
+    
+</div> 
+    {% endblock %}

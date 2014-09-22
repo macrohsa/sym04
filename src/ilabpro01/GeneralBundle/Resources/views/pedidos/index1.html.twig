@@ -1,11 +1,11 @@
-{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
+{% extends "ilabpro01BackAdminBundle:Default:baseMenu.html.twig" %}
 
 {% block stylesheets %}
 
-    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('bundles/ilabpro01backfotog/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('bundles/ilabpro01backfotog/css/tabla.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/tabla.css') }}" rel="stylesheet" type="text/css" />
 
 {% endblock %}
 
@@ -19,14 +19,11 @@
     <div class="item_input_dato_personal">
          <div class="input_nombre">
                                     <label class="label_informacion_personal">
-                                         Estado:
+                                         Fotógrafo:
                                     </label>
                                    
                                         <select>
-                                            <option>[Todos]</option>
-                                            <option>Pendiente</option>
-                                            <option>En proceso</option>
-                                            <option>Entregado</option>
+                                            <option>[Seleccione]</option>
                                         </select>
                                     </div>
             </div>

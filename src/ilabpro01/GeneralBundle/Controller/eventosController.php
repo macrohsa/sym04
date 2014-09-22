@@ -34,6 +34,25 @@ class eventosController extends Controller
             'entities' => $entities,
         );
     }
+    
+    
+    /**
+     * Lists all eventos entities.
+     *
+     * @Route("/", name="eventos")
+     * @Method("GET")
+     * @Template()
+     */
+    public function index1Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('ilabpro01GeneralBundle:eventos')->findAll();
+
+        return array(
+            'entities' => $entities,
+        );
+    }
 
     /**
      * Creates a new eventos entity.

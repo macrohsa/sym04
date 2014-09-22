@@ -1,6 +1,6 @@
 ilabpro01_back_admin_homepage:
-    pattern:  /hello
-    defaults: { _controller: ilabpro01BackAdminBundle:Admin:index }
+    pattern:  /home
+    defaults: { _controller: ilabpro01BackAdminBundle:Default:index }
 
    
 index_admin:

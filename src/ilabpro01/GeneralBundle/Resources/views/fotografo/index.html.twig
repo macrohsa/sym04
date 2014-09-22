@@ -15,7 +15,41 @@
         
         <div id="contenidoCuerpo">
     <h2>Fot&oacute;grafos</h2>
-
+    <table border='0' cellspacing='0' cellpadding='4' align='left'>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                <input type="text" size="20" >
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Apellido:
+            </td>
+            <td>
+                <input type="text" size="20" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Estudio:
+            </td>
+            <td>
+                <input type="text" size="20" >
+            </td>
+            <td>
+               
+            </td>
+            <td>
+               <input type="button" value="Buscar"> 
+            </td>
+        </tr>
+    </table>
+   
+        <br><br><br><br><br><br><br><br>
     <table class="imagetable">
         <thead>
             <tr>
@@ -82,14 +116,24 @@
         </tbody>
     </table>
 
+    
         <ul>
+            {#
         <li>
             <a href="{{ path('fotografo_new') }}">
                 Nuevo fotografo
             </a>
         </li>
+#}
+            
+            <li>
+                <a href="{{ path('login_back') }}">
+                    Volver
+                </a>
+            </li>
     </ul>
     
+        
         
            </div>
     

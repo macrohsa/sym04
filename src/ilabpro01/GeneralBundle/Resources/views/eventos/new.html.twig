@@ -64,6 +64,20 @@
                                         {{ form_errors(form.fechaFin) }}
                                     </div>
                                 </div>
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         Tipo acceso
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        <select>
+                                        
+                                        <option>1 - Con clave</option>
+                                      <option>2 - Sin clave</option>
+                                      
+                                    </select>
+                                    </div>
+                                </div>
        
     
 
@@ -72,7 +86,7 @@
                                             <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('eventos') }}'; return false;">
                                     </div>
                                     <div class="boton_siguiente">
-                                            <input class="boton" type="button" name="aceptar" value="Aceptar" >
+                                            <input class="boton" type="button" name="aceptar" value="Aceptar" onclick="document.location='{{ path('eventos') }}'; return false;">
                                     </div>
                                 </div>
         

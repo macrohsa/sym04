@@ -1,13 +1,68 @@
 
 #contenedorCuerpo {
-    width: 970px;
-    margin: auto;
-    clear: both;
+    width: 900px;
+    margin: 10px auto;
+/*    clear: both;*/
     background-color: #ffffff;
+
 }
 
 #contenidoCuerpo {
     padding-top: 50px;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
+    /*margin: 0 150px;*/
+    
+}
+
+
+p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+p {
+margin: 10px;
+}
+
+html{margin:0;padding:0}
+body{
+    /*font: 76% arial,sans-serif;*/
+     margin:8px;
+     padding:0}
+
+a{display:block;color: #981793;padding:10px}
+
+
+
+#container{
+    width:900px;
+    margin:0 auto;
+}
+
+#wrapper{
+    float:left;
+    width:100%;
+    
+}
+
+#content{
+    padding-top: 50px;
+    margin: 0px auto;
+}
+
+
+#extra{
+    float:left;
+    width:150px;
+    margin-left:-150px;
+}
+
+
+
+.input_nombre{
+    margin: 8px;
 }
 

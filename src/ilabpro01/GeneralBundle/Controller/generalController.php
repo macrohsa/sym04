@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use ilabpro01\GeneralBundle\Entity\eventos;
 
 
 class generalController extends Controller
@@ -35,7 +36,16 @@ class generalController extends Controller
     }
     
     
-    
+    /**
+     * @Route("/listapedidos", name="lista_pedidos")
+     */
+    public function listadoPedidosAction(){
+        
+        // Redirige al controlador fotografo para gestionar Fotógrafos
+        $response = $this->forward('ilabpro01GeneralBundle:pedidos:index1');
+        
+        return $response;
+    }
     
     /**
      * @Route("/hello", name="index")
@@ -49,5 +59,17 @@ class generalController extends Controller
     }
     
     
-    
+    public function galeriaAction(){
+       
+       return $this->render('ilabpro01GeneralBundle:Default:galeria.html.twig');
+        
+   }
+   
+   
+   public function productosEventoAction(){
+       
+       return $this->render('ilabpro01GeneralBundle:Default:productosEvento.html.twig');
+        
+   }
+   
 }
