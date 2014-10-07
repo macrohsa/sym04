@@ -2,21 +2,6 @@ ilabpro01_general_homepage:
     pattern:  /hello
     defaults: { _controller: ilabpro01GeneralBundle:Default:index }
 
-
-lista_fotog:
-    pattern:  /listafotog
-    defaults: { _controller: ilabpro01GeneralBundle:general:listadoFotog }
-    
-lista_pedidos:
-    pattern:  /listapedidos
-    defaults: { _controller: ilabpro01GeneralBundle:general:listadoPedidos }
-    
-    
-index:
-    pattern:  /hello
-    defaults: { _controller: ilabpro01GeneralBundle:general:volverLogin }
-    
-
 eventos:
     pattern:  /eventos
     defaults: { _controller: ilabpro01GeneralBundle:eventos:index }
@@ -85,6 +70,40 @@ fotografo_update:
 fotografo_delete:
     pattern:  /fotografo/{id}
     defaults: { _controller: ilabpro01GeneralBundle:fotografo:delete }
+
+    
+galeria_fotos:
+    pattern:  /eventosfotos
+    defaults: { _controller: ilabpro01GeneralBundle:general:galeria }
+    
+    
+galeria1_fotos:
+    pattern:  /eventos1fotos
+    defaults: { _controller: ilabpro01GeneralBundle:general:galeria1 }
+    
+galeria2_fotos:
+    pattern:  /eventos2fotos
+    defaults: { _controller: ilabpro01GeneralBundle:general:galeria2 }  
+    
+index:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01GeneralBundle:general:volverLogin }
+    
+    
+lista_fotog:
+    pattern:  /listafotog
+    defaults: { _controller: ilabpro01GeneralBundle:general:listadoFotog }
+ 
+    
+lista_pedidos:
+    pattern:  /listapedidos
+    defaults: { _controller: ilabpro01GeneralBundle:general:listadoPedidos }
+
+
+login_evento:
+    pattern:  /loginevento
+    defaults: { _controller: ilabpro01GeneralBundle:general:loginEvento }
+    
     
 pedidos:
     pattern:  /pedidos
@@ -189,7 +208,12 @@ productos_delete:
     pattern:  /productos/{id}
     defaults: { _controller: ilabpro01GeneralBundle:productos:delete }
     
-
+    
+productos_evento:
+    pattern:  /eventosproductos
+    defaults: { _controller: ilabpro01GeneralBundle:general:productosEvento } 
+    
+    
 usuarios:
     pattern:  /usuarios
     defaults: { _controller: ilabpro01GeneralBundle:usuarios:index }
@@ -225,11 +249,5 @@ usuarios_delete:
     defaults: { _controller: ilabpro01GeneralBundle:usuarios:delete }
     
     
-galeria_fotos:
-    pattern:  /eventosfotos
-    defaults: { _controller: ilabpro01GeneralBundle:general:galeria }
-    
-productos_evento:
-    pattern:  /eventosproductos
-    defaults: { _controller: ilabpro01GeneralBundle:general:productosEvento }
+
     

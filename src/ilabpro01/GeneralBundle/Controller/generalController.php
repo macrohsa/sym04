@@ -66,9 +66,29 @@ class generalController extends Controller
    }
    
    
+   public function galeria1Action(){
+       
+       return $this->render('ilabpro01GeneralBundle:Default:galeria1.html.twig');
+        
+   }
+   
+   public function galeria2Action(){
+       
+       return $this->render('ilabpro01GeneralBundle:Default:galeria2.html.twig');
+        
+   }
+   
+   
    public function productosEventoAction(){
        
        return $this->render('ilabpro01GeneralBundle:Default:productosEvento.html.twig');
+        
+   }
+   
+   
+   public function loginEventoAction(){
+       
+       return $this->render('ilabpro01GeneralBundle:eventos:loginEvento.html.twig');
         
    }
    

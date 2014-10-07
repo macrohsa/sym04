@@ -12,82 +12,78 @@
     
     <div id="cuerpo" >
         <div id="contenedor_cuerpo">
-    
+            
 
-    <form action="{{ path('usuarios_create') }}" method="post" {{ form_enctype(form) }}>
+            <form action="{{ path('usuarios_create') }}" method="post" {{ form_enctype(form) }}>
         
                 <div class="main_formulario">
-                        <div class="box_leyenda_completar_datos">
-                            <div class="box_titulo_secundario">
-                                <h2>Nuevo cliente</h2>
-                            </div> 
+                    <div class="box_leyenda_completar_datos">
+                        <div class="box_titulo_secundario">
+                            <h2>Nuevo cliente</h2>
+                        </div> 
 
-                            <div class="item_input_dato_personal">
-                                    <label class="label_informacion_personal">
-                                         {{ form_label(form.nombre) }}
-                                        <span>*</span>
-                                    </label>
-                                    <div class="box_input input_nombre">
-                                        {{ form_widget(form.nombre, { 'attr': {'class': 'textbox'} }) }}
-                                        {{ form_errors(form.nombre) }}
-                                    </div>
-                                </div>
-                            <div class="item_input_dato_personal">
-                                    <label class="label_informacion_personal">
-                                         {{ form_label(form.apellido) }}
-                                        <span>*</span>
-                                    </label>
-                                    <div class="box_input input_nombre">
-                                        {{ form_widget(form.apellido, { 'attr': {'class': 'textbox'} }) }}
-                                        {{ form_errors(form.apellido) }}
-                                    </div>
-                                </div>
-                            <div class="item_input_dato_personal">
-                                    <label class="label_informacion_personal">
-                                         {{ form_label(form.email) }}
-                                        <span>*</span>
-                                    </label>
-                                    <div class="box_input input_nombre">
-                                        {{ form_widget(form.email, { 'attr': {'class': 'textbox'} }) }}
-                                        {{ form_errors(form.email) }}
-                                    </div>
-                                </div>
-                            <div class="item_input_dato_personal">
-                                    <label class="label_informacion_personal">
-                                         Fecha Alta
-                                        
-                                    </label>
-                                    <div class="box_input input_nombre">
-                                        {{ form_widget(form.fechaAlta, { 'attr': {'class': 'textbox'} }) }}
-                                        {{ form_errors(form.fechaAlta) }}
-                                    </div>
-                                </div>
-                            <div class="item_input_dato_personal">
-                                    <label class="label_informacion_personal">
-                                         Contraseña
-                                        <span>*</span>
-                                    </label>
-                                    <div class="box_input input_nombre">
-                                        {{ form_widget(form.contrasenia, { 'attr': {'class': 'textbox'} }) }}
-                                        {{ form_errors(form.contrasenia) }}
-                                    </div>
-                                </div>
-                <div class="box_botonera">
-                                    <div class="boton_anterior">
-                                            <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('usuarios') }}'; return false;">
-                                    </div>
-                                    <div class="boton_siguiente">
-                                            <input class="boton" type="button" name="aceptar" value="Aceptar" onclick="document.location='{{ path('usuarios') }}'; return false;">
-                                    </div>
-                                </div>
-        
-            
+                        <div class="item_input_dato_personal">
+                            <label class="label_informacion_personal">
+                                 {{ form_label(form.nombre) }}
+                                <span>*</span>
+                            </label>
+                            <div class="box_input input_nombre">
+                                {{ form_widget(form.nombre, { 'attr': {'class': 'textbox'} }) }}
+                                {{ form_errors(form.nombre) }}
+                            </div>
+                        </div>
+                        <div class="item_input_dato_personal">
+                            <label class="label_informacion_personal">
+                                 {{ form_label(form.apellido) }}
+                                <span>*</span>
+                            </label>
+                            <div class="box_input input_nombre">
+                                {{ form_widget(form.apellido, { 'attr': {'class': 'textbox'} }) }}
+                                {{ form_errors(form.apellido) }}
+                            </div>
+                        </div>
+                        <div class="item_input_dato_personal">
+                            <label class="label_informacion_personal">
+                                 {{ form_label(form.email) }}
+                                <span>*</span>
+                            </label>
+                            <div class="box_input input_nombre">
+                                {{ form_widget(form.email, { 'attr': {'class': 'textbox'} }) }}
+                                {{ form_errors(form.email) }}
+                            </div>
+                        </div>
+                        <div class="item_input_dato_personal">
+                            <label class="label_informacion_personal">
+                                 Fecha Alta
+
+                            </label>
+                            <div class="box_input input_nombre">
+                                {{ form_widget(form.fechaAlta, { 'attr': {'class': 'textbox'} }) }}
+                                {{ form_errors(form.fechaAlta) }}
+                            </div>
+                        </div>
+                        <div class="item_input_dato_personal">
+                            <label class="label_informacion_personal">
+                                 Contraseña
+                                <span>*</span>
+                            </label>
+                            <div class="box_input input_nombre">
+                                {{ form_widget(form.contrasenia, { 'attr': {'class': 'textbox'} }) }}
+                                {{ form_errors(form.contrasenia) }}
+                            </div>
+                        </div>
+                        <div class="box_botonera">
+                            <div class="boton_anterior">
+                                <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('usuarios') }}'; return false;">
+                            </div>
+                            <div class="boton_siguiente">
+                                <input class="boton" type="button" name="aceptar" value="Aceptar" onclick="document.location='{{ path('usuarios') }}'; return false;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-    
-    </div>
-    </form>
-            </div>
-    
+            </form>
+        </div>
     </div>  
 {% endblock %}
 

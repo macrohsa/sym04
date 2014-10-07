@@ -1,0 +1,118 @@
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/tabla.css') }}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block cuerpo %}
+
+    <div id="contenedorCuerpo">
+        
+        <div id="contenidoCuerpo">
+    <h2>Pedidos</h2>
+
+    <div class="item_input_dato_personal">
+         <div class="input_nombre">
+                                    <label class="label_informacion_personal">
+                                         Estado:
+                                    </label>
+                                   
+                                        <select>
+                                            <option>[Todos]</option>
+                                            <option>Pendiente</option>
+                                            <option>En proceso</option>
+                                            <option>Entregado</option>
+                                        </select>
+                                    </div>
+            </div>
+            <div class="item_input_dato_personal">
+                <div class="input_nombre">
+                                    <label class="label_informacion_personal">
+                                         Evento:
+                                    </label>
+                                    
+                                        <select>
+                                            <option>[Todos]</option>
+                                            <option>Evento A</option>
+                                            <option>Evento B</option>
+                                        </select>
+                                    </div>
+            </div>
+    <div class="item_input_dato_personal">
+        <div class="input_nombre">
+                                    <label class="label_informacion_personal">
+                                         Fecha desde:
+                                    </label>
+                                    
+                                        <input type="date"> 
+            <label class="label_informacion_personal">
+                                         Fecha hasta:
+                                    </label>
+                                    
+                                        <input type="date"> 
+                                    </div>
+            </div>
+    <br>
+    <table class="imagetable">
+        <thead>
+            <tr>
+                {#
+                <th>Id</th>
+                <th>Sitio</th>
+                <th>Fotografo</th>
+                #}
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Importe</th>
+                <th>Estado</th>
+                <th>Evento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                {#
+                <td><a href="{{ path('pedidos_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.sitio }}</td>
+                <td>{{ entity.fotografo }}</td>
+                #}
+                <td>{{ entity.usuario }}</td>
+                <td>{{ entity.fechaAlta }}</td>
+                <td>{{ entity.importe }}</td>
+                <td>{{ entity.estado }}</td>
+                <td>{{ entity.evento }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('pedidos_show', { 'id': entity.id }) }}">Mostrar</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('pedidos_edit', { 'id': entity.id }) }}">Editar</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+    {#
+        <ul>
+        <li>
+            <a href="{{ path('pedidos_new') }}">
+                Nuevo pedido
+            </a>
+        </li>
+    </ul>
+   #}             
+           </div>
+    
+    </div> 
+    {% endblock %}

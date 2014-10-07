@@ -1,0 +1,50 @@
+{% extends "ilabpro01FrontBundle:Default:baseMenuFront.html.twig" %}
+
+{% block stylesheets %}
+
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backadmin/css/cuerpo.css') }}" rel="stylesheet" type="text/css" />
+
+
+{% endblock %}
+
+{% block cuerpo %}
+        
+        <div id="contenedorCuerpo">
+        
+            <div id="contenidoCuerpo">
+            <form id="form1" name="form1" action="{{ path('front_homepage') }}" method="get">
+                
+                <h2>
+                    Datos Fotógrafo
+                </h2>
+                <div class="fila">
+                    <span class="etiqueta">
+                         <label for="usuario">Ingrese URL fotógrafo:</label>
+                    </span>
+                    
+                    <span class="form-el">
+                        <input id="usuario" name="usuario" type="text" required="true" value="http://..." autocomplete="off" maxlength="20"/>
+                    </span>
+                </div>
+                <br>
+                <div class="fila">
+                    <span class="form-el">
+                        <button class="boton" type="button" onclick="document.location='{{ path('show_fotog') }}'; return false;" >Ingresar</button>
+                    </span>
+                </div>
+                <br><br>
+                <div class="fila">
+                    <span class="form-el">
+                        <a href="{{ path('ilabpro01_front_homepage') }}">Home</a>
+                    </span>
+                </div>
+
+                </form>
+      </div>
+</div>
+
+{% endblock %}
+
+

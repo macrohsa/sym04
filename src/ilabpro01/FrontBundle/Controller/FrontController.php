@@ -20,6 +20,18 @@ class FrontController extends Controller
     }
     
     
+    public function loginFrontAction()
+    {
+        return $this->render('ilabpro01FrontBundle:Front:loginFront.html.twig');
+    }
+    
+    
+    public function urlFotogAction()
+    {
+        return $this->render('ilabpro01FrontBundle:Front:urlFotog.html.twig');
+    }
+    
+    
     public function showFotogAction(){
         
         

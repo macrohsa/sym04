@@ -1,28 +1,78 @@
-{% extends '::base.html.twig' %}
+{% extends "ilabpro01BackFotogBundle:Default:baseMenuFotog.html.twig" %}
 
-{% block body -%}
-    <h1>precioXproducto edit</h1>
+{% block stylesheets %}
 
-    <form action="{{ path('precioxproducto_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-        <input type="hidden" name="_method" value="PUT" />
-        {{ form_widget(edit_form) }}
-        <p>
-            <button type="submit">Edit</button>
-        </p>
-    </form>
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/formularios.css') }}" rel="stylesheet" type="text/css" />
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('precioxproducto') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('precioxproducto_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
 {% endblock %}
+
+{% block cuerpo %}
+        
+    <div id="cuerpo" >
+        <div id="contenedor_cuerpo">
+    
+
+    
+   <form action="{{ path('precioxproducto_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+
+    
+
+
+                <div class="main_formulario">
+                        <div class="box_leyenda_completar_datos">
+                            <div class="box_titulo_secundario">
+                                <h2>Nueva Lista</h2>
+                            </div> 
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.lista) }}
+                                        <span>*</span>
+                                    </label>
+                                     <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.lista, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.lista) }}
+                                    </div>
+                                </div>
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.producto) }}
+                                        <span>*</span>
+                                    </label>
+                                     <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.producto, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.producto) }}
+                                    </div>
+                                </div>
+                            <div class="item_input_dato_personal">
+                                    <label class="label_informacion_personal">
+                                         {{ form_label(edit_form.precio) }}
+                                        <span>*</span>
+                                    </label>
+                                    <div class="box_input input_nombre">
+                                        {{ form_widget(edit_form.precio, { 'attr': {'class': 'textbox'} }) }}
+                                        {{ form_errors(edit_form.precio) }}
+                                    </div>
+                                </div>
+
+    
+                <div class="box_botonera">
+                                    <div class="boton_anterior">
+                                            <input class="boton" type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('precioxproducto') }}'; return false;">
+                                    </div>
+                                    <div class="boton_siguiente">
+                                            <input class="boton" type="button" name="aceptar" value="Aceptar" onclick="document.location='{{ path('precioxproducto') }}'; return false;">
+                                    </div>
+                                </div>
+        
+            
+                </div>
+    
+    </div>
+    </form>
+            </div>
+    
+    </div> 
+{% endblock %}
+ 

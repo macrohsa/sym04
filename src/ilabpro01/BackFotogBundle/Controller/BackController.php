@@ -92,15 +92,19 @@ class BackController extends Controller
          return $this->render('ilabpro01BackFotogBundle:Back:imagenPerfil.html.twig');
     }
     
-    /**
-     * @Route("/pedidos", name="lista_pedidos")
-     */
+
     public function listadoPedidosAction(){
         
-        // Redirige al controlador pedidos para gestionar pedidos
-        $response = $this->forward('ilabpro01GeneralBundle:pedidos:index');
         
-        return $response;
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('ilabpro01GeneralBundle:pedidos')->findAll();
+
+        
+        return $this->render('ilabpro01BackFotogBundle:Back:pedidos.html.twig',
+                array(
+            'entities' => $entities,
+        ));
     }
     
     

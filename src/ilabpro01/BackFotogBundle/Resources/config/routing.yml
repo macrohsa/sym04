@@ -3,56 +3,6 @@ ilabpro01_back_fotog_homepage:
     defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
     
     
-index_back:
-    pattern:  /hello
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
-    
-    
-login_fotog:
-    pattern:  /login
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:login }
-    
-    
-perfil_fotog:
-    pattern:  /perfil
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:perfil }
-    
-    
-lista_productos:
-    pattern:  /listaprod
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoProductos }
-    
-    
-pedidos:
-    pattern:  /pedidos
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:pedidos }
-    
-    
-precios_productos:
-    pattern:  /preciosprod
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:preciosProductos }
-    
-    
-lista_eventos:
-    pattern:  /listaeventos
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoEventos }
-    
-    
-lista_pedidos:
-    pattern:  /listapedidos
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoPedidos }
-  
-  
-pendientes:
-    pattern:  /pendientes
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoPendientes }
-    
-    
-lista_usuarios:
-    pattern:  /listausuarios
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoUsuarios }
-    
-    
 albumes:
     pattern:  /albumes
     defaults: { _controller: ilabpro01BackFotogBundle:albumes:index }
@@ -85,13 +35,8 @@ albumes_update:
     
 albumes_delete:
     pattern:  /albumes/{id}
-    defaults: { _controller: ilabpro01BackFotogBundle:albumes:delete }
-
-    
-plan_fot:
-    pattern:  /planfot
-    defaults: { _controller: ilabpro01BackFotogBundle:Back:seleccionarPlan }
-    
+    defaults: { _controller: ilabpro01BackFotogBundle:albumes:delete }   
+ 
     
 fotog_edit:
     pattern:  /fotografo/{id}/edit
@@ -101,6 +46,66 @@ fotog_edit:
 fotog_imagen:
     pattern:  /fotografo/imagen
     defaults: { _controller: ilabpro01BackFotogBundle:Back:fotogImagen }
+    
+    
+index_back:
+    pattern:  /hello
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:index }
+
+    
+lista_eventos:
+    pattern:  /listaeventos
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoEventos }
+    
+    
+lista_fotog_pedidos:
+    pattern:  /listap
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoPedidos }
+    
+   
+lista_productos:
+    pattern:  /listaprod
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoProductos }
+    
+    
+lista_usuarios:
+    pattern:  /listausuarios
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoUsuarios }
+    
+    
+login_fotog:
+    pattern:  /login
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:login }
+    
+    
+pedidos:
+    pattern:  /pedidos
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:pedidos }
+  
+  
+pendientes:
+    pattern:  /pendientes
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:listadoPendientes }
+    
+    
+perfil_fotog:
+    pattern:  /perfil
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:perfil }
+    
+    
+plan_fot:
+    pattern:  /planfot
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:seleccionarPlan }
+    
+    
+precios_productos:
+    pattern:  /preciosprod
+    defaults: { _controller: ilabpro01BackFotogBundle:Back:preciosProductos }
+    
+
+
+    
+
     
 
 

@@ -16,20 +16,20 @@ header  div.izquierda{
         width: 670px;
         background-color: #E6E6E6;
         /*Bordes redondeados*/
-    -webkit-border-radius:5px;/*Chrome y Safari*/
-    -moz-border-radius:5px;/*Firefox*/
-    -o-border-radius:5px;/*Opera*/
-    border-radius:5px;/*Estandar por defecto*/
+/*    -webkit-border-radius:5px;Chrome y Safari
+    -moz-border-radius:5px;Firefox
+    -o-border-radius:5px;Opera
+    border-radius:5px;Estandar por defecto*/
 }
 
 header  div.derecha{
 	float:left;
         background-color: #FFF;
         /*Bordes redondeados*/
-    -webkit-border-radius:5px;/*Chrome y Safari*/
-    -moz-border-radius:5px;/*Firefox*/
-    -o-border-radius:5px;/*Opera*/
-    border-radius:5px;/*Estandar por defecto*/
+/*    -webkit-border-radius:5px;Chrome y Safari
+    -moz-border-radius:5px;Firefox
+    -o-border-radius:5px;Opera
+    border-radius:5px;Estandar por defecto*/
 }
 
 header div.logo{
@@ -39,12 +39,12 @@ header div.logo{
     position: absolute;
 	width:300px;
         background-color: #FFF;
-        background-image: url("../images/logo1.jpg");
+        background-image: url("../images/logo2.jpg");
         /*Bordes redondeados*/
-    -webkit-border-radius:5px;/*Chrome y Safari*/
-    -moz-border-radius:5px;/*Firefox*/
-    -o-border-radius:5px;/*Opera*/
-    border-radius:5px;/*Estandar por defecto*/
+/*    -webkit-border-radius:5px;Chrome y Safari
+    -moz-border-radius:5px;Firefox
+    -o-border-radius:5px;Opera
+    border-radius:5px;Estandar por defecto*/
 }
 
 header div.logo  h1{

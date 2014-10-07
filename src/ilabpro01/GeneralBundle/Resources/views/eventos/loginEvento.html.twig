@@ -1,0 +1,46 @@
+{% extends "ilabpro01FrontBundle:Default:baseMenuFront.html.twig" %}
+
+{% block stylesheets %}
+        
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/encabezado.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bundles/ilabpro01backfotog/css/login.css') }}" rel="stylesheet" type="text/css" />
+        
+
+{% endblock %}
+
+{% block cuerpo %}
+        
+        <div id="contenedor">
+            <form id="form1" name="form1" action="{{ path('galeria2_fotos') }}" method="get">
+                
+                <p>
+                    Ingreso Evento 1
+                </p>
+                <div class="fila">
+                    <span class="etiqueta">
+                         <label for="usuario">Código:</label>
+                    </span>
+                    <span class="form-el">
+                        <input id="usuario" name="usuario" type="text" required="true" value="aa" autocomplete="off" maxlength="20"/>
+                    </span>
+                </div>
+                <div class="fila">
+                    <span class="form-el">
+                        <button class="boton" type="submit" >Ingresar</button>
+                    </span>
+                </div>
+                <div class="fila">
+                    <span class="form-el">
+                        <a href="http://localhost/Project02/web/app_dev.php/front/showevent">Volver</a>
+                    </span>
+                </div>
+
+
+                </form>
+      </div>
+
+
+{% endblock %}
+
+
